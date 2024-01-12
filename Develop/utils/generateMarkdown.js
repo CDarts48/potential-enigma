@@ -33,14 +33,19 @@ This project is licensed under the ${license} license. Click [here](${getLicense
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title} 
+return `# ${data.title}
+
 ${renderLicenseBadge(data.license)}
+
 ## Description
 ${data.description}
+
 ## Deployed Application URL
 ${data.link}
+
 ## Screenshot
 ![alt-text:'Screen shot of app'](${data.screenshot})
+
 ## Table of Contents
 * [Features](#features)
 * [Languages & Dependencies](#languagesanddependencies)
@@ -48,17 +53,21 @@ ${data.link}
 * [Contributors](#contributors)
 * [Testing](#testing)
 * [Questions](#questions)
-  ## Features
+
+## Features
   ${data.features}
-  ## Languages & Dependencies
+  
+## Languages & Dependencies
   ${data.require}
-  ## How to Use This Application
+  
+## How to Use This Application
   ${data.usage}
+
   ## Contributors
   ${data.contributors}
-  ## Testing
+  
+## Testing
   ${data.test}
-  ## Questions
   Please send your questions [here](mailto:${data.email}?subject=[GitHub]%20Dev%20Connect) or visit [github/${data.creator}](https://github.com/${data.creator}).
 `;
 }

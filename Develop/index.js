@@ -1,22 +1,9 @@
-// TODO: Include packages needed for this application
+// Include packages needed for this application
 const inquirer = require("inquirer");
 const fs = require("fs");
 const path = require("path");
-// const util = require('util');\const api = require('./utils/api.js');
 const generateMarkdown = require("./utils/generateMarkdown.js");
 // Generate the HTML string???
-
-const name = "My Blog Post";
-const content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.";
-
-const htmlString = `
-  <div>
-    <h1>${name}</h1>
-    <p>${content}</p>
-  </div>
-`;
-
-console.log(htmlString);
 
 // Check the end of last nights video for the correct way to do the above for the html creation then adjust for a read me file
 // Array copied from github.com/dopecello 
@@ -39,10 +26,10 @@ const questions = [
   {
     type: "input",
     name: "link",
-    message: "Please provide a URL where a user can access your deployed application."
+    message: "Please provide a URL where a user can access your app."
   },
   {
-    type: "checkbox",
+    type: "list",
     name: "license",
     message: "Please select a license applicable to this project.",
     choices: ["MIT", "APACHE2.0", "Boost1.0", "MPL2.0", "BSD2", "BSD3", "none"],
@@ -91,7 +78,7 @@ function writeToFile(fileName, data) {
 }
 inquirer.prompt(questions).then((answers) => {
   // Write the answers to a new file
-  fs.writeFile("userInput.json", JSON.stringify(answers, null, 2), (err) => {
+  fs.writeFile("readme.md", generateMarkdown(answers), (err) => {
     if (err) throw err;
     console.log("Data written to file");
   });
@@ -101,3 +88,6 @@ inquirer.prompt(questions).then((answers) => {
   // Function call to initialize app
   init();
 });
+
+
+// peramaters are slots that you can grab somewhere else function (per_+_+_amiter1, peramiter2)
