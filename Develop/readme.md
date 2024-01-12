@@ -9,7 +9,8 @@ The purpose of this is to allow the user to streamline writing in writing their 
 https://github.com/CDarts48/README-generator
 
 ## Screenshot
-![alt-text:'Screen shot of app']()
+![image](https://github.com/CDarts48/potential-enigma/assets/137344214/7ed9c7c3-437b-49e1-8b52-1f68065d0ccb)
+
 
 ## Table of Contents
 * [Features](#features)
